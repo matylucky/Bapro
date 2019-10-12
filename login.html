@@ -7,10 +7,11 @@
     <title>Login - Juegos Online</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/styles.css">
+
 </head>
 <body>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <a class="navbar-brand" href="#">Juegos Online
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,12 +31,34 @@
                         <li class="nav-item">
                             <a class="nav-link" href="preguntas.html">Preguntas</a>
                         </li>
-                    
+
                         </ul>
-                        
+
                     </div>
             </nav>
         </header>
+        <br>
+        <main class="row">
+          <div class="container">
+            <div class="Usuario" class ="col-xs-12 offset-md-4 col-md 4  col lg-10">
+              <h3>
+                <form action="preguntas.html" method="post">
+                  <label for="Usuario">Usuario</label>
+                    <input type="text" name="Usuario" placeholder="Usuario">
+                  </h3>
+            </div>
+            <br>
+            <div class="password" class ="col-xs-12 offset-md-4 col-md 4  col lg-10">
+              <h3>
+                  <label for="Clave">Clave</label>
+                    <input type="password" name="Clave" placeholder= "Clave">
+              </h3>
+            </div>
+            <br>
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+        </main>
 
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
