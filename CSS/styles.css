@@ -24,3 +24,10 @@
     display: none; 
   }
 }
+ul#Recordar_contraseña li {
+font-size: 15px;
+}
+div.informacionUsuario {
+  color: #B4BCDA;
+  font-size: 10px;
+}
