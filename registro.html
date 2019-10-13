@@ -36,7 +36,61 @@
                 </div>
         </nav>
     </header>
+<form class="registracion">
+        <div class="container"> 
+            <div class="form-group">
+              <label for="usuario">Usuario</label>
+              <input type="text" class="form-control" id="GenerarUsuario" placeholder="Ingrese su usuario" required>
+                <div class="informacionUsuario">Su nombre de usuario sólo puede contener letras y números.</div>
+            </div>
+            <div class="form-group">
+              <label for="Contraseña">Contraseña</label>
+              <input type="text" class="form-control" id="Contraseña" placeholder="Ingrese su constraseña" required>
+                <div class="informacionUsuario">Su contraseña debe contener letras y números, y puede ser de 6 a 10 caracteres.</div>
+            </div>
+              <div class="form-group">
+               <label for="email">Correo electrónico</label>
+                <input type="text" class="form-control" id="Correo electrónico" placeholder="Ingrese su correo electrónico" required>
+            </div>
+            <p>Sexo:
+                <input type="radio" name="hm" value="h"> Hombre
+                <input type="radio" name="hm" value="m"> Mujer
+            </p>
+            Fecha de Nacimiento: <input type="date" name="fecha" size="20"><br></br>
+            <p>
+                <label for="pais"> Pais:</label>
+                    <select class="" name="pais" id="pais">
+                        <option value="ar">
+                            Argentina
+                        </option>
+                        <option value="br">
+                            Brasil
+                        </option>
+                        <option value="Pa">
+                            Paraguay
+                        </option>
+                        <option value="Bo">
+                            Bolivia
+                        </option>
+                        <option value="Ur">
+                            Uruguay
+                        </option>
+                        <option value="Ch">
+                            Chile
+                        </option>
+                        <option value="Otro">
+                            Otro
+                        </option>
 
+                    </select>
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+             </p>
+            </div>
+          </form>
+        </div>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
