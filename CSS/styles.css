@@ -27,10 +27,20 @@
     border-radius: .25rem;
 
 }
+/* Login */
+div.row{
+  display:flex;
+  flex-direction: column;
+}
+div.usuario {
+  box-sizing: none;
+}
 ul#Recordar_contraseña li {
 font-size: 15px;
 }
+/* Registro */
 div.informacionUsuario {
   color: #B4BCDA;
   font-size: 10px;
 }
+
