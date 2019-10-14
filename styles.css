@@ -40,6 +40,9 @@
     border-radius: .25rem;
 
 }
+div.usuario {
+  box-sizing: none;
+}
 ul#Recordar_contraseña li {
 font-size: 15px;
 }
