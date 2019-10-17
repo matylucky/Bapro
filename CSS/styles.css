@@ -13,6 +13,14 @@ footer {
   padding: 25px;
 }
 
+header nav.navbar {
+  background-color: white;
+}
+
+nav a.navbar-brand img{
+  height: 100px;
+}
+
 .carousel-inner img {
     width: 100%; /* Set width to 100% */
     margin: auto;
@@ -38,19 +46,41 @@ footer {
     background-color: #fff;
     background-clip: padding-box;
     border-radius: .25rem;
+}
 
-}
 /* Login */
-div.row{
-  display:flex;
-  flex-direction: column;
+
+h1.popup-title {
+  font-size: 35px;
 }
+
+p.popup-paragraph a, div.row ul li a{
+  font-size: 15px;
+  text-align: center;
+}
+
+div.submit{
+  font-size: 16px;
+}
+
+div.submit button.button-login{
+    background-color: #139187;
+    font-weight: bold;
+    color: white;
+}
+
+div.row{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
 div.usuario {
   box-sizing: none;
 }
-ul#Recordar_contraseña li {
-font-size: 15px;
-}
+
+
 /* Registro */
 div.informacionUsuario {
   color: #B4BCDA;
