@@ -105,5 +105,14 @@ Footer.Footer-Preguntas{
   margin-top: 10%;
   background-color: white;
 }
+div.TituloPreguntas {
+padding-left: 20px;
+}
+div.Preguntas{
+  padding-left: 20px;
+}
+h4 {
+  color: #139187;
+}
 
 
