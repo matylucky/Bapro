@@ -47,6 +47,13 @@ nav a.navbar-brand img{
     background-clip: padding-box;
     border-radius: .25rem;
 }
+/*Inicio*/
+div.Inicio {
+  padding-left: 20px;
+}
+.Invitacion h3{
+color: #139187;
+}
 
 /* Login */
 
