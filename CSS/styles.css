@@ -86,3 +86,19 @@ div.informacionUsuario {
   color: #B4BCDA;
   font-size: 10px;
 }
+div.submit button.button-Registro{
+  background-color: #139187;
+  font-weight: bold;
+  color: white;
+}
+div.submit button.button-Borrar{
+  background-color: #139187;
+  font-weight: bold;
+  color: white;
+}
+Footer.Footer-registro{
+  margin-top: 40%;
+  background-color: white;
+}
+
+
