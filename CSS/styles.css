@@ -76,6 +76,14 @@ div.submit button.button-login{
     color: white;
 }
 
+ul#Recordar_contraseña{
+  padding-inline-start: 0px;
+}
+
+input#inputMemo{
+  margin-left: 20px;
+}
+
 div.row{
   display: flex;
   flex-direction: column;
@@ -120,4 +128,8 @@ div.Preguntas{
 }
 h4 {
   color: #139187;
+}
+
+select#pais, input#date {
+  font-size: 16px;
 }
