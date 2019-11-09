@@ -3,14 +3,17 @@
   border-radius: 0;
 }
 
+
 /* Add a gray background color and some padding to the footer */
-header{
-    background-color: #f2f2f2;
+
+ html, body{
+  height: 100%;
+  margin: 0;
 }
 
-footer {
-  background-color: #f2f2f2;
-  padding: 25px;
+
+header{
+    background-color: #f2f2f2;
 }
 
 header nav.navbar {
@@ -26,19 +29,12 @@ nav a.navbar-brand img{
     margin: auto;
     min-height:200px;
 }
-/* Hide the carousel text when the screen is less than 600 pixels wide */
-@media (max-width: 600px) {
-  .carousel-caption {
-    display: none;
-  }
-}
 
  .container {
     display: block;
-    width: 25%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .37rem .7rem;
-    text-align: center;
+    width: 100%;
+    padding: 20px;
+    text-align: left;
     font-size: 20px;
     font-weight: 400;
     line-height: 1.5;
@@ -49,7 +45,7 @@ nav a.navbar-brand img{
 }
 /*Inicio*/
 div.Inicio {
-  padding-left: 20px;
+  padding: 20px;
 }
 .Invitacion h3{
 color: #139187;
@@ -66,6 +62,7 @@ p.popup-paragraph a, div.row ul li a{
   text-align: center;
 }
 
+
 div.submit{
   font-size: 16px;
 }
@@ -74,22 +71,25 @@ div.submit button.button-login{
     background-color: #139187;
     font-weight: bold;
     color: white;
+    text-align: center;
 }
 
 ul#Recordar_contraseña{
   padding-inline-start: 0px;
+  margin-left: 20px;
 }
 
 input#inputMemo{
   margin-left: 20px;
 }
 
-div.row{
+main.row{
   display: flex;
   flex-direction: column;
   padding: 0;
   margin: 0;
 }
+
 
 div.usuario {
   box-sizing: none;
@@ -111,25 +111,83 @@ div.submit button.button-Borrar{
   font-weight: bold;
   color: white;
 }
-Footer.Footer-registro{
-  margin-top: 40%;
-  background-color: white;
-}
+
 /*Preguntas*/
-Footer.Footer-Preguntas{
-  margin-top: 10%;
-  background-color: white;
+div.TituloPreguntas, div.Preguntas{
+  padding-left: 0 !important;
 }
-div.TituloPreguntas {
-padding-left: 20px;
-}
-div.Preguntas{
+
+main{
   padding-left: 20px;
+  padding-right: 20px;
 }
+
 h4 {
   color: #139187;
 }
 
 select#pais, input#date {
   font-size: 16px;
+}
+
+footer {
+  background-color:rgb(19, 145, 135,0.4);
+  padding: 10px;
+  margin-top: 50px;
+}
+
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none;
+  }
+}
+
+/*Smartphone*/
+
+/*Tablets, Ipads*/
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+
+input.form-control{
+  width: 40%;
+}
+footer {
+  margin-top: 10%;
+}
+
+div.Inicio {
+  padding: 40px;
+}
+
+main{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+}
+
+/*Desktops, Tablets*/
+@media only screen and (min-width : 1100px) {
+
+  div.Inicio {
+    padding: 40px;
+  }
+  
+  div.container{
+    margin-left: 40px;
+  }
+
+  main{
+    padding-left: 40px;
+  }
+
+  input.form-control{
+    width: 40%;
+  }
+
+  footer{
+
+    
+  }
 }
