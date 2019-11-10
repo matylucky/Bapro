@@ -18,10 +18,17 @@ header{
 
 header nav.navbar {
   background-color: white;
+  font-family: 'ZCOOL QingKe HuangYou';
+  font-size: 20px;
+  border-bottom: 1px solid #139187 ;
 }
 
 nav a.navbar-brand img{
-  height: 100px;
+  height: 80px;
+}
+
+ ul li a.nav-link:hover{
+  border-bottom: 2px solid #139187 ;
 }
 
 .carousel-inner img {
@@ -34,7 +41,7 @@ nav a.navbar-brand img{
     display: block;
     width: 100%;
     padding: 20px;
-    text-align: left;
+    text-align: center;
     font-size: 20px;
     font-weight: 400;
     line-height: 1.5;
@@ -122,6 +129,23 @@ main{
   padding-right: 20px;
 }
 
+h1{
+  color: black;
+  font-family: 'ZCOOL QingKe HuangYou';
+  padding-left: 20px;
+}
+
+div.Bienvenidos h1{
+  background-image: url(../fondo.png);
+  height: 100%;
+  padding: 0;
+  text-align: center;
+}
+
+h3{
+  font-family: 'ZCOOL QingKe HuangYou';
+}
+
 h4 {
   color: #139187;
 }
@@ -131,11 +155,14 @@ select#pais, input#date {
 }
 
 footer {
-  background-color:rgb(19, 145, 135,0.4);
+  background-color:rgb(19, 145, 135,0.2);
   padding: 10px;
   margin-top: 50px;
 }
 
+footer.pie img{
+  height: 30px;
+}
 
 /* Hide the carousel text when the screen is less than 600 pixels wide */
 @media (max-width: 600px) {
@@ -149,11 +176,24 @@ footer {
 /*Tablets, Ipads*/
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
 
+  input#GenerarUsuario.form-control{
+    margin-left: 200px;
+  }
+  
+  input#Contraseña.form-control{
+    margin-left: 200px;
+  }
+
+  input#Correo_electrónico.form-control{
+    margin-left: 200px;
+  }
+
+ul#Recordar_contraseña{
+  margin-left: 240px;
+}
+
 input.form-control{
   width: 40%;
-}
-footer {
-  margin-top: 10%;
 }
 
 div.Inicio {
@@ -165,10 +205,21 @@ main{
   padding-right: 40px;
 }
 
+div.Bienvenidos h1{
+  text-align: center;
+}
+
+footer {
+  margin-top: 10%;
+}
 }
 
 /*Desktops, Tablets*/
 @media only screen and (min-width : 1100px) {
+
+  div.Bienvenidos h1{
+    text-align: center;
+  }
 
   div.Inicio {
     padding: 40px;
@@ -178,16 +229,33 @@ main{
     margin-left: 40px;
   }
 
+  input.form-control{
+    width: 40%;
+    
+  }
+
+  input#GenerarUsuario.form-control{
+    margin-left: 20px;
+  }
+
   main{
     padding-left: 40px;
   }
 
-  input.form-control{
-    width: 40%;
+  input#GenerarUsuario.form-control{
+    margin-left: 350px;
+  }
+  
+  input#Contraseña.form-control{
+    margin-left: 350px;
   }
 
-  footer{
-
-    
+  input#Correo_electrónico.form-control{
+    margin-left: 350px;
   }
+
+ul#Recordar_contraseña{
+  margin-left: 450px;
+}
+
 }
