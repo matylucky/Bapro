@@ -49,6 +49,8 @@ nav a.navbar-brand img{
     background-color: #fff;
     background-clip: padding-box;
     border-radius: .25rem;
+    margin:0px;
+    margin-right: 40px;
 }
 /*Inicio*/
 div.Inicio {
@@ -60,9 +62,6 @@ color: #139187;
 
 /* Login */
 
-h1.popup-title {
-  font-size: 35px;
-}
 
 p.popup-paragraph a, div.row ul li a{
   font-size: 15px;
@@ -135,7 +134,7 @@ h1{
   padding-left: 20px;
 }
 
-div.Bienvenidos h1{
+h1{
   background-image: url(../fondo.png);
   height: 100%;
   padding: 0;
@@ -205,7 +204,7 @@ main{
   padding-right: 40px;
 }
 
-div.Bienvenidos h1{
+h1{
   text-align: center;
 }
 
@@ -217,10 +216,12 @@ footer {
 /*Desktops, Tablets*/
 @media only screen and (min-width : 1100px) {
 
-  div.Bienvenidos h1{
+  h1.Bienvenidos, h1.TituloPreguntas, h1.popup-title, h1.popup-title1, h1{
+    padding: 0;
     text-align: center;
   }
 
+ 
   div.Inicio {
     padding: 40px;
   }
@@ -240,6 +241,7 @@ footer {
 
   main{
     padding-left: 40px;
+    padding-right: 40px;
   }
 
   input#GenerarUsuario.form-control{
@@ -257,5 +259,6 @@ footer {
 ul#Recordar_contraseña{
   margin-left: 450px;
 }
+
 
 }
