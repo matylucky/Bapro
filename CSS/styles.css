@@ -49,8 +49,8 @@ nav a.navbar-brand img{
     background-color: #fff;
     background-clip: padding-box;
     border-radius: .25rem;
-    margin:0px;
-    margin-right: 40px;
+    margin-right: auto;
+    margin-left: auto;
 }
 /*Inicio*/
 div.Inicio {
@@ -155,8 +155,12 @@ select#pais, input#date {
 
 footer {
   background-color:rgb(19, 145, 135,0.2);
-  padding: 10px;
-  margin-top: 50px;
+  /*padding: 10px;
+  margin-top: 50px;*/
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
 }
 
 footer.pie img{
@@ -227,7 +231,7 @@ footer {
   }
   
   div.container{
-    margin-left: 40px;
+    /*margin-left: 40px;*/
   }
 
   input.form-control{
