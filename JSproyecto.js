@@ -65,5 +65,24 @@ if(email.value == ""){
     email.style.border = "1px solid green";
     }
     })
+/*fetch de paises*/
+
+window.addEventListener('load',function(){
+
+  fetch("https://restcountries.eu/rest/v2/all")
+    .then (function(respuesta){
+      return respuesta.json();
+    })
+    .then (function(data){
+      var paises = document.querySelector("selector#pais");
+       for(i=0; i < data.length; i++)
+paises.innerHTML = paises.innerHTML
++ "<option value='+data[i].name'>"+data[i].name+"</option>"
+      console.log(data);
+    })
+    .catch (function(error){
+      alert(error);
+    })
 
 
+});
