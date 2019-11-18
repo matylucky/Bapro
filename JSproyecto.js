@@ -74,10 +74,8 @@ window.addEventListener('load',function(){
       return respuesta.json();
     })
     .then (function(data){
-      var paises = document.querySelector("selector#pais");
+      var paises = document.querySelector("#pais");
        for(i=0; i < data.length; i++){
-/*paises.innerHTML = paises.innerHTML
-+ "<option value='"data.name[i]"'>""</option>"*/
 paises.innerHTML = paises.innerHTML
 + "<option value='+data[i].name'>"+data[i].name+"</option>"
       console.log(data);
