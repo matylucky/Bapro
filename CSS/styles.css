@@ -42,6 +42,8 @@ nav a.navbar-brand img{
   margin-right: auto;
   margin-left: auto;
 }
+
+
 /*Inicio*/
 div.Inicio {
   padding: 20px;
@@ -77,6 +79,11 @@ main.row{
   padding: 0;
   margin: 0;
 }
+
+div.row{
+  margin-left: 10%;
+}
+
 div.usuario {
   box-sizing: none;
 }
@@ -98,6 +105,7 @@ div.button button.button-Borrar{
 }
 
 /*Imagenes de registro*/
+
 #GenerarUsuario{
   background-image: url(../usuario.png);
   background-size: 30px 30px;
@@ -117,11 +125,11 @@ div.button button.button-Borrar{
   background-repeat: no-repeat;
   }
 #RepetirContraseña{
-  margin-left: 350px;
   background-image: url(../email.png);
   background-size: 30px 30px;
   background-position: 95%;
-  background-repeat: no-repeat;} 
+  background-repeat: no-repeat;
+} 
 
   /*Preguntas*/
 div.TituloPreguntas, div.Preguntas{
@@ -191,23 +199,17 @@ footer.pie img{
 
 /*Tablets, Ipads*/
 
-@media only screen and (min-width : 768px) and (max-width : 1024px) {
+@media only screen and (min-width : 768px) and (max-width : 991px) {
 
-input#GenerarUsuario.form-control{
-  margin-left: 200px;
+input#GenerarUsuario.form-control, input#Contraseña.form-control, input#RepetirContraseña.form-control,input#Correo_electrónico.form-control {
+  margin-left: 15%;
+  width: 70%;
 } 
-input#Contraseña.form-control{
-  margin-left: 200px;
-}
-input#Correo_electrónico.form-control{
-  margin-left: 200px;
-}
+
 ul#Recordar_contraseña{
   margin-left: 240px;
 }
-input.form-control{
-  width: 40%;
-}
+
 div.Inicio {
   padding: 40px;
 }
@@ -215,6 +217,11 @@ main{
   padding-left: 40px;
   padding-right: 40px;
 }
+
+div.row{
+  margin-left: auto;
+}
+
 h1{
   text-align: center;
 }
@@ -223,9 +230,7 @@ footer {
 }
 }
 
-/*Desktops, Tablets*/
-
-@media only screen and (min-width : 1100px) {
+@media only screen and (min-width: 992px ) and (max-width: 1024px) {
 
 h1.Bienvenidos, h1.TituloPreguntas, h1.popup-title, h1.popup-title1, h1{
   padding: 0;
@@ -234,29 +239,79 @@ h1.Bienvenidos, h1.TituloPreguntas, h1.popup-title, h1.popup-title1, h1{
 div.Inicio {
   padding: 40px;
 } 
-div.container{
-  margin-left: 40px;
-}
+
 input.form-control{
-    width: 40%;
+    width: 50%;
   }
-input#GenerarUsuario.form-control{
-  margin-left: 20px;
-}
+
 main{
   padding-left: 40px;
   padding-right: 40px;
 }
-input#GenerarUsuario.form-control{
-  margin-left: 350px;
+
+div.row{
+  margin-left: auto;
 }
-input#Contraseña.form-control{
-  margin-left: 350px;
+
+div.informacionUsuario{
+  margin-left: 20%;
 }
-input#Correo_electrónico.form-control{
-  margin-left: 350px;
+
+input#GenerarUsuario.form-control, input#Contraseña.form-control, input#RepetirContraseña.form-control, input#Correo_electrónico.form-control{
+  margin-left: 25%;
+  width: 50%;
+}
+
+div.submit label{
+  margin-left: 20px;
+}
+
+ul#Recordar_contraseña{
+  margin-left: 35%  ;
+}
+
+/*Desktops*/
+
+@media only screen and (min-width: 1025px){
+
+h1.Bienvenidos, h1.TituloPreguntas, h1.popup-title, h1.popup-title1, h1{
+  padding: 0;
+  text-align: center;
+}
+div.Inicio {
+  padding: 40px;
+}
+div.container{
+  margin-left: 40px;
+  }
+main{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+div.row{
+  margin-left: auto;
+}
+div label{
+  margin-left: 15%;
+}
+div.informacionUsuario{
+  margin-left: 20%;
+}
+input#GenerarUsuario.form-control, input#Contraseña.form-control, input#RepetirContraseña.form-control, input#Correo_electrónico.form-control{
+  margin-left: 33%;
+  width: 50%;
+}
+div.form-group label{
+  margin-left: 15%;
+}
+div.submit label{
+  margin-left: 20px;
+}
+p.popup-paragraph {
+  margin-left: 40%; 
 }
 ul#Recordar_contraseña{
-  margin-left: 450px;
+  margin-left: 43%;
 }
+
 }
