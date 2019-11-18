@@ -201,117 +201,180 @@ footer.pie img{
 
 @media only screen and (min-width : 768px) and (max-width : 991px) {
 
-input#GenerarUsuario.form-control, input#Contraseña.form-control, input#RepetirContraseña.form-control,input#Correo_electrónico.form-control {
-  margin-left: 15%;
-  width: 70%;
-} 
-
-ul#Recordar_contraseña{
-  margin-left: 240px;
-}
-
-div.Inicio {
-  padding: 40px;
-}
-main{
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-div.row{
-  margin-left: auto;
-}
-
-h1{
-  text-align: center;
-}
-footer {
-  margin-top: 10%;
-}
-}
-
+  input#GenerarUsuario.form-control, input#Contraseña.form-control, input#RepetirContraseña.form-control,input#Correo_electrónico.form-control {
+    margin-left: 15%;
+    width: 70%;
+  } 
+  
+  ul#Recordar_contraseña{
+    margin-left: 240px;
+  }
+  
+  div.Inicio {
+    padding: 40px;
+  }
+  main{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  div.row{
+    margin-left: auto;
+  }
+  
+  h1{
+    text-align: center;
+  }
+  footer {
+    margin-top: 10%;
+  }
+  }
+  
 @media only screen and (min-width: 992px ) and (max-width: 1024px) {
-
-h1.Bienvenidos, h1.TituloPreguntas, h1.popup-title, h1.popup-title1, h1{
-  padding: 0;
-  text-align: center;
-}
-div.Inicio {
-  padding: 40px;
-} 
-
-input.form-control{
+  
+  h1.Bienvenidos, h1.TituloPreguntas, h1.popup-title, h1.popup-title1, h1{
+    padding: 0;
+    text-align: center;
+  }
+  div.Inicio {
+    padding: 40px;
+  } 
+  
+  input.form-control{
+      width: 50%;
+    }
+  
+  main{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  div.row{
+    margin-left: auto;
+  }
+  
+  div.informacionUsuario{
+    margin-left: 20%;
+  }
+  
+  input#GenerarUsuario.form-control, input#Contraseña.form-control, input#RepetirContraseña.form-control, input#Correo_electrónico.form-control{
+    margin-left: 25%;
     width: 50%;
   }
-
-main{
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-div.row{
-  margin-left: auto;
-}
-
-div.informacionUsuario{
-  margin-left: 20%;
-}
-
-input#GenerarUsuario.form-control, input#Contraseña.form-control, input#RepetirContraseña.form-control, input#Correo_electrónico.form-control{
-  margin-left: 25%;
-  width: 50%;
-}
-
-div.submit label{
-  margin-left: 20px;
-}
-
-ul#Recordar_contraseña{
-  margin-left: 35%  ;
-}
-
-/*Desktops*/
-
-@media only screen and (min-width: 1025px){
-
-h1.Bienvenidos, h1.TituloPreguntas, h1.popup-title, h1.popup-title1, h1{
-  padding: 0;
-  text-align: center;
-}
-div.Inicio {
-  padding: 40px;
-}
-div.container{
-  margin-left: 40px;
+  
+  div.submit label{
+    margin-left: 20px;
   }
-main{
-  padding-left: 40px;
-  padding-right: 40px;
-}
-div.row{
-  margin-left: auto;
-}
-div label{
-  margin-left: 15%;
-}
-div.informacionUsuario{
-  margin-left: 20%;
-}
-input#GenerarUsuario.form-control, input#Contraseña.form-control, input#RepetirContraseña.form-control, input#Correo_electrónico.form-control{
-  margin-left: 33%;
-  width: 50%;
-}
-div.form-group label{
-  margin-left: 15%;
-}
-div.submit label{
-  margin-left: 20px;
-}
-p.popup-paragraph {
-  margin-left: 40%; 
-}
-ul#Recordar_contraseña{
-  margin-left: 43%;
+  
+  ul#Recordar_contraseña{
+    margin-left: 35%  ;
+  }
 }
 
+@media only screen and (min-width: 1025px) and (max-width:1439px ){
+
+  h1.Bienvenidos, h1.TituloPreguntas, h1.popup-title, h1.popup-title1, h1{
+    padding: 0;
+    text-align: center;
+  }
+  div.Inicio {
+    padding: 40px;
+  }
+  div.container{
+    margin-left: 40px;
+    }
+  main{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  div.row{
+    margin-left: auto;
+  }
+ 
+   /*registro*/
+  input#GenerarUsuario.form-control, input#Contraseña.form-control, input#RepetirContraseña.form-control, input#Correo_electrónico.form-control{
+    margin-left: 30%;
+    width: 50%;
+  }
+  div.form-group label, div label, p.popup-paragraph{
+    margin-left: 10%;
+  }
+  div.submit label{
+    margin-left: 20px;
+  }
+
+  ul#Recordar_contraseña{
+    margin-left: 43%;
+  }
+  div.informacionUsuario{
+    margin-left: 10%;
+  }
+
+  div.button{
+    margin-left: 10%;
+  }
+
+  p{
+    margin-left: 10%;
+  }
+
+  p label{
+    margin-left: auto;
+  }
+
+}
+
+@media only screen and (min-width: 1440px){
+
+  h1.Bienvenidos, h1.TituloPreguntas, h1.popup-title, h1.popup-title1, h1{
+    padding: 0;
+    text-align: center;
+  }
+  div.Inicio {
+    padding: 40px;
+  }
+  div.container{
+    margin-left: 40px;
+    margin-right: 0;
+    }
+  main{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  div.row{
+    margin-left: auto;
+  }
+ 
+  ul#Recordar_contraseña{
+    margin-left: 62%;
+  }
+
+   /*registro*/
+  input#GenerarUsuario.form-control, input#Contraseña.form-control, input#RepetirContraseña.form-control, input#Correo_electrónico.form-control{
+    margin-left: 50%;
+    width: 50%;
+  }
+  div.form-group label, div label, p.popup-paragraph{
+    margin-left: 50%;
+  }
+  div.submit label{
+    margin-left: 20px;
+  }
+
+ 
+  div.informacionUsuario{
+    margin-left: 50%;
+  }
+
+  div.button{
+    margin-left: 50%;
+  }
+
+  p label{
+    margin-left: auto;
+  }
+
+div.container p, div#fechaDeNac {
+  margin-left: 50%;
+}
 }
