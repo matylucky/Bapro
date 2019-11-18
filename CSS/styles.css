@@ -67,8 +67,9 @@ div.submit button.button-login{
   text-align: center;
 }
 ul#Recordar_contraseña{
-  padding-inline-start: 0px;
-  margin-left: 20px;
+  padding-inline-start: 40px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 input#inputMemo{
   margin-left: 20px;
@@ -78,10 +79,6 @@ main.row{
   flex-direction: column;
   padding: 0;
   margin: 0;
-}
-
-div.row{
-  margin-left: 10%;
 }
 
 div.usuario {
@@ -159,6 +156,11 @@ h4 {
 select#pais, input#date {
   font-size: 16px;
 }
+
+select#pais{
+  width: 60%;
+}
+
 footer {
   background-color:rgb(19, 145, 135,0.2);
   /*padding: 10px;
@@ -199,15 +201,17 @@ footer.pie img{
 
 /*Tablets, Ipads*/
 
+
+
 @media only screen and (min-width : 768px) and (max-width : 991px) {
 
-  input#GenerarUsuario.form-control, input#Contraseña.form-control, input#RepetirContraseña.form-control,input#Correo_electrónico.form-control {
+input#GenerarUsuario.form-control, input#Contraseña.form-control, input#RepetirContraseña.form-control,input#Correo_electrónico.form-control {
     margin-left: 15%;
     width: 70%;
   } 
   
   ul#Recordar_contraseña{
-    margin-left: 240px;
+    margin-left: 30%;
   }
   
   div.Inicio {
@@ -228,6 +232,11 @@ footer.pie img{
   footer {
     margin-top: 10%;
   }
+
+  select#pais{
+    width: 40%;
+  }
+  
   }
   
 @media only screen and (min-width: 992px ) and (max-width: 1024px) {
@@ -269,9 +278,15 @@ footer.pie img{
   ul#Recordar_contraseña{
     margin-left: 35%  ;
   }
+
+  select#pais{
+    width: 30%;
+  }
+  
+
 }
 
-@media only screen and (min-width: 1025px) and (max-width:1439px ){
+@media only screen and (min-width: 1025px) and (max-width:1499px ){
 
   h1.Bienvenidos, h1.TituloPreguntas, h1.popup-title, h1.popup-title1, h1{
     padding: 0;
@@ -318,9 +333,13 @@ footer.pie img{
     margin-left: auto;
   }
 
+  select#pais{
+    width: 30%;
+  }
+  
 }
 
-@media only screen and (min-width: 1440px){
+@media only screen and (min-width: 1500px) and (max-width: 1809px){
 
   h1.Bienvenidos, h1.TituloPreguntas, h1.popup-title, h1.popup-title1, h1{
     padding: 0;
@@ -373,4 +392,51 @@ footer.pie img{
 div.container p, div#fechaDeNac {
   margin-left: 50%;
 }
+
+select#pais{
+  width: 50%;
 }
+
+}
+
+@media only screen and (min-width: 1810px) {
+  h1.Bienvenidos, h1.TituloPreguntas, h1.popup-title, h1.popup-title1, h1{
+    padding: 0;
+    text-align: center;
+  }
+  div.Inicio {
+    padding: 40px;
+  }
+
+  main{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  div.row{
+    margin-left: 0;
+  }
+ 
+  ul#Recordar_contraseña{
+    margin-left: 38%;
+  }
+
+   /*registro*/
+  input#GenerarUsuario.form-control, input#Contraseña.form-control, input#RepetirContraseña.form-control, input#Correo_electrónico.form-control{
+    margin-left: 25%;
+    width: 50%;
+  }
+  
+  div.submit label{
+    margin-left: 20px;
+  }
+
+  p label{
+    margin-left: auto;
+  }
+
+  select#pais{
+  width: 30%;
+}
+
+}
+
