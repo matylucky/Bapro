@@ -76,9 +76,12 @@ window.addEventListener('load',function(){
     .then (function(data){
       var paises = document.querySelector("#pais");
        for(i=0; i < data.length; i++){
-paises.innerHTML = paises.innerHTML
-+ "<option value='+data[i].name'>"+data[i].name+"</option>"
-      console.log(data);
+         if(data[i].region == "Americas"){
+           paises.innerHTML = paises.innerHTML
+           + "<option value='+data[i]'>"+data[i].name+"</option>";
+         }
+
+
     }})
     .catch (function(error){
       alert(error);
@@ -86,5 +89,3 @@ paises.innerHTML = paises.innerHTML
 
 
 });
-
-
