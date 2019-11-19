@@ -7,23 +7,28 @@ var errores = false;
 var nombre = document.getElementById('GenerarUsuario');
 var contrasenia = document.getElementById('Contraseña');
 var email = document.getElementById('Correo_electrónico');
-
+var sexoSel = document.getElementById('radioButtonSexo');
 
 /*Los span de errores del Formulario*/
 var errorUsuario = document.getElementById("errorGenerarUsuario");
 var errorContraseña = document.getElementById("errorContraseña");
-var errorEmail = document.getElementById("errorEmail");
+var errorCorreo = document.getElementById("errorEmail");
+var errorSexoSel = document.getElementById('errorSexo'); 
 
 /*Expresión regular para validar el Correo electrónico*/
-var expresión = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+var regex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 
 /*Condición de error para USUARIO*/
-if(nombre.value == ""){
+if (nombre.value == ""){
     errorGenerarUsuario.innerHTML = "El usuario es obligatorio.";
     nombre.style.border = "1px solid red";
     errores = true;
     }else if(nombre.value.length <6 ){
     errorGenerarUsuario.innerHTML = "El usuario debe tener al menos 6 caracteres.";
+    nombre.style.border = "1px solid red";
+    errores = true;
+    }else if(nombre.value.length >15 ){
+    errorGenerarUsuario.innerHTML = "El usuario debe tener menos de 15 caracteres.";
     nombre.style.border = "1px solid red";
     errores = true;
     }else{
@@ -39,6 +44,10 @@ if(contrasenia.value == ""){
     errorContraseña.innerHTML = "La contraseña debe tener al menos 6 caracteres";
     contrasenia.style.border = "1px solid red";
     errores = true;
+    }else if(contrasenia.value.length>15){
+    errorContraseña.innerHTML = "La contraseña debe tener menos de 15 caracteres";
+    contrasenia.style.border = "1px solid red";
+    errores = true;
     }else if(contrasenia.value != RepetirContraseña.value){
     errorContraseña.innerHTML = "Las contraseñas deben coincidir";
     contrasenia.style.border = "1px solid red";
@@ -49,22 +58,37 @@ if(contrasenia.value == ""){
     }
 /*Condición de error para EMAIL*/
 if(email.value == ""){
-    errorEmail.innerHTML = "El email es obligatorio.";
+    errorCorreo.innerHTML = "El email es obligatorio.";
     email.style.border = "1px solid red";
     errores = true;
-    }else if(email.value.length < 10){
-    errorEmail.innerHTML = "El email es inválido.";
-    email.style.border = "1px solid red";
-    errores = true;
-    }else if(XPathExpression.test(email)){
-    errorEmail.innerHTML = "El email es inválido.";
+    }else if(regex.test(email)){
+    errorCorreo.innerHTML = "El email es inválido.";
     email.style.border = "1px solid red";
     errores = true;
     }else{
-    errorEmail.innerHTML = "";
+    errorCorreo.innerHTML = "";
     email.style.border = "1px solid green";
     }
     })
+/*Condición de error para la selección de SEXO --->     CHEQUEAR!!!!!!!!!!!!!!!!! */
+for(var i = 0; i < 2; i++){
+  if(value = "h" || "m"){
+/*uno de esos botones contiene su valor checked en verdadero*/
+    errores = false;
+    break;
+  }
+  if(!errores){
+/*Si los botones se mantienen sin seleccionar, entonces el error no cambiará*/
+    errorSexoSel.innerHTML = "Debe seleccionar un opción.";
+    sexoSel.style.border = "1px solid red";
+    errores = false;
+  }
+  else{
+    errorSexoSel.innerHTML = "";
+    sexoSel.style.border = "1px solid green";
+  }
+}
+
 /*fetch de paises*/
 
 window.addEventListener('load',function(){
