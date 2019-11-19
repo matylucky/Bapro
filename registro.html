@@ -42,17 +42,17 @@
   <div  class="">
     <form class="registracion" >
         <div class="container">
-            <div class="form-group" >
+            <div class="form-group" data-toggle="tooltip" title="Su usuario sólo puede contener letras y números, entre 6 y 15 caracteres.">
               <label for="usuario">Usuario</label>
               <input type="text" class="form-control" id="GenerarUsuario" placeholder="Ingrese su usuario" value="" >
               <span style="color:red" class="errorFormControl" id="errorGenerarUsuario"> </span>
-                <div class="informacionUsuario">Su nombre de usuario sólo puede contener letras y números.</div>
+                <div class="informacionUsuario">Su usuario sólo puede contener letras y números, entre 6 y 15 caracteres.</div>
             </div>
-            <div class="form-group">
+            <div class="form-group" data-toggle="tooltip" title="Su contraseña sólo puede contener letras y números, entre 6 y 15 caracteres.">
               <label for="Contraseña">Contraseña</label>
               <input type="password" class="form-control" id="Contraseña" placeholder="Ingrese su constraseña" value="" >
               <span style="color:red" class="errorFormControl" id="errorContraseña"> </span>
-                <div class="informacionUsuario">Su contraseña puede contener letras y números, y debe ser de al menos 6 caracteres.</div>
+                <div class="informacionUsuario">Su contraseña sólo puede contener letras y números, entre 6 y 15 caracteres.</div>
             </div>
               <label for="Contraseña"> Repetir Contraseña</label>
               <input type="password" class="form-control" id="RepetirContraseña" placeholder="Repita su constraseña" value="" >
@@ -65,8 +65,9 @@
             </div>
             <br>
             <p>Sexo:
-                <input type="radio" name="hm" value="h"> Hombre
-                <input type="radio" name="hm" value="m"> Mujer
+                <input type="radio" id=radioButtonSexo name="hm" value="h" required> Hombre
+                <input type="radio" id=radioButtonSexo name="hm" value="m" required> Mujer
+                <span style="color:red" class="errorFormControl" id="errorSexo"></span>
             </p>
             <br>
             <div id="fechaDeNac">
@@ -76,13 +77,12 @@
             <br> 
             <p>
                 <label for="pais"> País:</label>
-                     <select class="" name="pais" id="pais">
+                     <select class="" name="pais" id="pais" data-toggle="tooltip" title="Debe seleccionar un País.">
                          <option value=''>
                            Selecciona tu Pais
                          </option>
- 
                      </select>
-             </p>
+            </p>
             <br>
             <div class="button">
                 <button type="button" class="button-Registro"  name="post">Enviar</button>
