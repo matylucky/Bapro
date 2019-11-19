@@ -263,6 +263,7 @@ input#GenerarUsuario.form-control, input#Contraseña.form-control, input#Repetir
   }
   
   div.informacionUsuario{
+    display: none;
     margin-left: 20%;
   }
   
@@ -322,6 +323,7 @@ input#GenerarUsuario.form-control, input#Contraseña.form-control, input#Repetir
     margin-left: 43%;
   }
   div.informacionUsuario{
+    display: none;
     margin-left: 10%;
   }
 
@@ -359,7 +361,6 @@ input#GenerarUsuario.form-control, input#Contraseña.form-control, input#Repetir
   div.row{
     margin-left: auto;
   }
- 
   ul#Recordar_contraseña{
     margin-left: 62%;
   }
@@ -375,29 +376,22 @@ input#GenerarUsuario.form-control, input#Contraseña.form-control, input#Repetir
   div.submit label{
     margin-left: 20px;
   }
-
- 
   div.informacionUsuario{
+    display: none;
     margin-left: 50%;
   }
-
   div.button{
     margin-left: 50%;
   }
-
-  p label{
+p label{
     margin-left: auto;
-  }
-
+}
 div.container p, div#fechaDeNac {
   margin-left: 50%;
 }
-
 select#pais{
   width: 50%;
-}
-
-}
+}}
 
 @media only screen and (min-width: 1810px) {
   h1.Bienvenidos, h1.TituloPreguntas, h1.popup-title, h1.popup-title1, h1{
@@ -407,7 +401,6 @@ select#pais{
   div.Inicio {
     padding: 40px;
   }
-
   main{
     padding-left: 40px;
     padding-right: 40px;
@@ -415,7 +408,9 @@ select#pais{
   div.row{
     margin-left: 0;
   }
- 
+  div.informacionUsuario{
+    display: none;
+  } 
   ul#Recordar_contraseña{
     margin-left: 38%;
   }
@@ -425,18 +420,12 @@ select#pais{
     margin-left: 25%;
     width: 50%;
   }
-  
-  div.submit label{
+   div.submit label{
     margin-left: 20px;
   }
-
   p label{
     margin-left: auto;
   }
-
   select#pais{
   width: 30%;
-}
-
-}
-
+}}
