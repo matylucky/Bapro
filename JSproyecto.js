@@ -1,3 +1,4 @@
+window.addEventListener('load', function(){
 //detectar cuando toco el boton de registro (se envía el formulario)
 var botonDeRegistro = document.querySelector(".button-Registro");
     botonDeRegistro.addEventListener('click',function(){
@@ -16,7 +17,7 @@ var errorCorreo = document.getElementById("errorEmail");
 var errorSexoSel = document.getElementById('errorSexo'); 
 
 /*Expresión regular para validar el Correo electrónico*/
-var regex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 
 /*Condición de error para USUARIO*/
 if (nombre.value == ""){
@@ -61,7 +62,7 @@ if(email.value == ""){
     errorCorreo.innerHTML = "El email es obligatorio.";
     email.style.border = "1px solid red";
     errores = true;
-    }else if(regex.test(email)){
+    }else if(!regex.test(email.value)){
     errorCorreo.innerHTML = "El email es inválido.";
     email.style.border = "1px solid red";
     errores = true;
@@ -90,8 +91,6 @@ for(var i = 0; i < 2; i++){
 }
 
 /*fetch de paises*/
-
-window.addEventListener('load',function(){
 
   fetch("https://restcountries.eu/rest/v2/all")
     .then (function(respuesta){
