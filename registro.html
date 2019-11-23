@@ -56,7 +56,7 @@
             </div>
               <label for="Contraseña"> Repetir Contraseña</label>
               <input type="password" class="form-control" id="RepetirContraseña" placeholder="Repita su constraseña" value="" >
-              <span style="color:red" class="errorFormControl" id="errorContraseña"> </span>
+              <span style="color:red" class="errorFormControl" id="errorRepContraseña"> </span>
               <br>
             <div class="form-group">
                <label for="email">Correo electrónico</label>
@@ -65,8 +65,8 @@
             </div>
             <br>
             <p>Sexo:
-                <input type="radio" id=radioButtonSexo name="hm" value="h" required> Hombre
-                <input type="radio" id=radioButtonSexo name="hm" value="m" required> Mujer
+                <input class="form-radio" type="radio" id="radioButtonSexo" name="hm" value="h" required> Hombre
+                <input class="form-radio" type="radio" id="radioButtonSexo" name="hm" value="m" required> Mujer
                 <span style="color:red" class="errorFormControl" id="errorSexo"></span>
             </p>
             <br>
@@ -102,4 +102,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
-
