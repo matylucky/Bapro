@@ -7,12 +7,14 @@ var errores = false;
 /*Capturamos los elementos*/
 var nombre = document.getElementById('GenerarUsuario');
 var contrasenia = document.getElementById('Contraseña');
+var repetirContraseña = document.getElementById('RepetirContraseña');
 var email = document.getElementById('Correo_electrónico');
 var sexoSel = document.getElementById('radioButtonSexo');
 
 /*Los span de errores del Formulario*/
 var errorUsuario = document.getElementById("errorGenerarUsuario");
 var errorContraseña = document.getElementById("errorContraseña");
+var errorRepetirContraseña = document.getElementById("errorRepContraseña")
 var errorCorreo = document.getElementById("errorEmail");
 var errorSexoSel = document.getElementById('errorSexo'); 
 
@@ -57,6 +59,25 @@ if(contrasenia.value == ""){
     errorContraseña.innerHTML = "";
     contrasenia.style.border = "1px solid green";
     }
+
+/*Condición de error para REPETIR CONTRASEÑA*/
+if(RepetirContraseña.value == ""){
+  errorRepetirContraseña.innerHTML = "La contraseña es obligatoria.";
+  repetirContraseña.style.border = "1px solid red";
+  errores = true;
+  }else if(repetirContraseña.value.length<6){
+  errorRepetirContraseña.innerHTML = "La contraseña debe tener al menos 6 caracteres";
+  repetirContraseña.style.border = "1px solid red";
+  errores = true;
+  }else if(repetirContraseña.value.length>15){
+  errorRepetirContraseña.innerHTML = "La contraseña debe tener menos de 15 caracteres";
+  repetirContraseña.style.border = "1px solid red";
+  errores = true;
+  }else{
+  errorRepetirContraseña.innerHTML = "";
+  repetirContraseña.style.border = "1px solid green";
+  }
+
 /*Condición de error para EMAIL*/
 if(email.value == ""){
     errorCorreo.innerHTML = "El email es obligatorio.";
@@ -71,24 +92,6 @@ if(email.value == ""){
     email.style.border = "1px solid green";
     }
     })
-/*Condición de error para la selección de SEXO --->     CHEQUEAR!!!!!!!!!!!!!!!!! */
-for(var i = 0; i < 2; i++){
-  if(value = "h" || "m"){
-/*uno de esos botones contiene su valor checked en verdadero*/
-    errores = false;
-    break;
-  }
-  if(!errores){
-/*Si los botones se mantienen sin seleccionar, entonces el error no cambiará*/
-    errorSexoSel.innerHTML = "Debe seleccionar un opción.";
-    sexoSel.style.border = "1px solid red";
-    errores = false;
-  }
-  else{
-    errorSexoSel.innerHTML = "";
-    sexoSel.style.border = "1px solid green";
-  }
-}
 
 /*fetch de paises*/
 
@@ -103,12 +106,8 @@ for(var i = 0; i < 2; i++){
            paises.innerHTML = paises.innerHTML
            + "<option value='+data[i]'>"+data[i].name+"</option>";
          }
-
-
     }})
     .catch (function(error){
       alert(error);
     })
-
-
 });
