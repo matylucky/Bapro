@@ -1,0 +1,39 @@
+//Insertar datos que ingresan a partir del envio del formulario//
+
+INSERT INTO usuarios (usuario, password, email, pais, fecha_nacimiento)
+VALUES ('usuario', 'password', 'email', 'pais', 'fecha_nacimiento') 
+
+//Validar usuario y password//
+
+SELECT usuario, password 
+FROM usuario 
+WHERE usuario = '".$usuario."' AND password = '".$password."'
+
+//Consulta puntos de todos los usuarios//
+
+SELECT idUsuarios, usuario, puntos 
+FROM juegos_db.usuarios;
+
+//Consulta los primeros cinco usuarios con mas puntos//
+
+SELECT *
+FROM juegos_db.usuarios
+ORDER BY puntos DESC
+LIMIT 5;
+
+//Consulta ganador//
+
+SELECT ganador_idUsuario
+FROM partidas;
+
+//Consulta analisis partidas//
+
+SELECT partida_usuario.usuario_idUsuario, partida_usuario.puntos, 
+CASE 
+	WHEN puntos < 5 THEN "Mal"
+	WHEN puntos < 7 THEN "Bien"
+	WHEN puntos < 9 THEN "Muy bien"	
+	ELSE "Excelente"
+END
+FROM partida_usuario;
+
