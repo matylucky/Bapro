@@ -15,13 +15,13 @@ DROP SCHEMA IF EXISTS `juegos_db` ;
 -- -----------------------------------------------------
 -- Schema Juegos
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `juegos_db` DEFAULT CHARACTER SET utf8 ;
+CREATE SCHEMA IF NOT EXISTS `juegos_db` DEFAULT CHARACTER SET UTF8MB4 ;
 USE `juegos_db` ;
 
 -- -----------------------------------------------------
 -- Table `Juegos`.`Usuarios`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Juegos`.`Usuarios` (
+CREATE TABLE IF NOT EXISTS `juegos_db`.`Usuarios` (
   `idUsuarios` INT NOT NULL AUTO_INCREMENT,
   `usuario` VARCHAR(45) NOT NULL,
   `password` VARCHAR(45) NOT NULL,
@@ -33,13 +33,13 @@ CREATE TABLE IF NOT EXISTS `Juegos`.`Usuarios` (
   PRIMARY KEY (`idUsuarios`))
 ENGINE = InnoDB;
 
-CREATE UNIQUE INDEX `idUsuarios_UNIQUE` ON `Juegos`.`Usuarios` (`idUsuarios` ASC) VISIBLE;
+CREATE UNIQUE INDEX `idUsuarios_UNIQUE` ON `juegos_db`.`Usuarios` (`idUsuarios` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table `Juegos`.`Partidas`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Juegos`.`Partidas` (
+CREATE TABLE IF NOT EXISTS `juegos_db`.`Partidas` (
   `idPartidas` INT NOT NULL AUTO_INCREMENT,
   `ganador_idUsuario` INT NOT NULL,
   `fecha` DATE NOT NULL,
@@ -47,20 +47,20 @@ CREATE TABLE IF NOT EXISTS `Juegos`.`Partidas` (
   PRIMARY KEY (`idPartidas`, `Usuarios_idUsuarios`),
   CONSTRAINT `fk_Partidas_Usuarios1`
     FOREIGN KEY (`ganador_idUsuario`)
-    REFERENCES `Juegos`.`Usuarios` (`idUsuarios`)
+    REFERENCES `juegos_db`.`Usuarios` (`idUsuarios`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_Partidas_Usuarios1_idx` ON `Juegos`.`Partidas` (`ganador_idUsuario` ASC) VISIBLE;
+CREATE INDEX `fk_Partidas_Usuarios1_idx` ON `juegos_db`.`Partidas` (`ganador_idUsuario` ASC) VISIBLE;
 
-CREATE UNIQUE INDEX `idPartidas_UNIQUE` ON `Juegos`.`Partidas` (`idPartidas` ASC) VISIBLE;
+CREATE UNIQUE INDEX `idPartidas_UNIQUE` ON `juegos_db`.`Partidas` (`idPartidas` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table `Juegos`.`Partida_Usuario`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Juegos`.`Partida_Usuario` (
+CREATE TABLE IF NOT EXISTS `juegos_db`.`Partida_Usuario` (
   `idPartida_Usuario` INT NOT NULL AUTO_INCREMENT,
   `usuario_idUsuario` INT NOT NULL,
   `partida_idPartida` INT NOT NULL,
@@ -72,27 +72,27 @@ CREATE TABLE IF NOT EXISTS `Juegos`.`Partida_Usuario` (
   PRIMARY KEY (`idPartida_Usuario`, `Usuarios_idUsuarios`, `Partidas_idPartidas`, `Partidas_Usuarios_idUsuarios`),
   CONSTRAINT `fk_Partida_Usuario_Usuarios`
     FOREIGN KEY (`usuario_idUsuario`)
-    REFERENCES `Juegos`.`Usuarios` (`idUsuarios`)
+    REFERENCES `juegos_db`.`Usuarios` (`idUsuarios`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Partida_Usuario_Partidas1`
     FOREIGN KEY (`partida_idPartida`)
-    REFERENCES `Juegos`.`Partidas` (`idPartidas`)
+    REFERENCES `juegos_db`.`Partidas` (`idPartidas`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_Partida_Usuario_Usuarios_idx` ON `Juegos`.`Partida_Usuario` (`usuario_idUsuario` ASC) VISIBLE;
+CREATE INDEX `fk_Partida_Usuario_Usuarios_idx` ON `juegos_db`.`Partida_Usuario` (`usuario_idUsuario` ASC) VISIBLE;
 
-CREATE UNIQUE INDEX `idPartida_Usuario_UNIQUE` ON `Juegos`.`Partida_Usuario` (`idPartida_Usuario` ASC) VISIBLE;
+CREATE UNIQUE INDEX `idPartida_Usuario_UNIQUE` ON `juegos_db`.`Partida_Usuario` (`idPartida_Usuario` ASC) VISIBLE;
 
-CREATE INDEX `fk_Partida_Usuario_Partidas1_idx` ON `Juegos`.`Partida_Usuario` (`partida_idPartida` ASC) VISIBLE;
+CREATE INDEX `fk_Partida_Usuario_Partidas1_idx` ON `juegos_db`.`Partida_Usuario` (`partida_idPartida` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table `Juegos`.`Categorias`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Juegos`.`Categorias` (
+CREATE TABLE IF NOT EXISTS `juegos_db`.`Categorias` (
   `idCategorias` INT NOT NULL AUTO_INCREMENT,
   `nombre_categoria` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idCategorias`))
@@ -102,39 +102,39 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `Juegos`.`Preguntas`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Juegos`.`Preguntas` (
+CREATE TABLE IF NOT EXISTS `juegos_db`.`Preguntas` (
   `idPreguntas` INT NOT NULL AUTO_INCREMENT,
   `descripcion` VARCHAR(150) NULL,
   `Categorias_idCategorias` INT NOT NULL,
   PRIMARY KEY (`idPreguntas`, `Categorias_idCategorias`),
   CONSTRAINT `fk_Preguntas_Categorias1`
     FOREIGN KEY (`Categorias_idCategorias`)
-    REFERENCES `Juegos`.`Categorias` (`idCategorias`)
+    REFERENCES `juegos_db`.`Categorias` (`idCategorias`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_Preguntas_Categorias1_idx` ON `Juegos`.`Preguntas` (`Categorias_idCategorias` ASC) VISIBLE;
+CREATE INDEX `fk_Preguntas_Categorias1_idx` ON `juegos_db`.`Preguntas` (`Categorias_idCategorias` ASC) VISIBLE;
 
-CREATE UNIQUE INDEX `idPreguntas_UNIQUE` ON `Juegos`.`Preguntas` (`idPreguntas` ASC) VISIBLE;
+CREATE UNIQUE INDEX `idPreguntas_UNIQUE` ON `juegos_db`.`Preguntas` (`idPreguntas` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table `Juegos`.`Respuestas`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Juegos`.`Respuestas` (
+CREATE TABLE IF NOT EXISTS `juegos_db`.`Respuestas` (
   `idRespuestas` INT NOT NULL AUTO_INCREMENT,
   `descripcion_respuesta` VARCHAR(150) NOT NULL,
   PRIMARY KEY (`idRespuestas`))
 ENGINE = InnoDB;
 
-CREATE UNIQUE INDEX `idRespuestas_UNIQUE` ON `Juegos`.`Respuestas` (`idRespuestas` ASC) VISIBLE;
+CREATE UNIQUE INDEX `idRespuestas_UNIQUE` ON `juegos_db`.`Respuestas` (`idRespuestas` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
 -- Table `Juegos`.`Pregunta_Respuesta`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Juegos`.`Pregunta_Respuesta` (
+CREATE TABLE IF NOT EXISTS `juegos_db`.`Pregunta_Respuesta` (
   `idPregunta_Respuesta` INT NOT NULL AUTO_INCREMENT,
   `correcta` TINYINT NULL,
   `puntaje` INT NOT NULL,
@@ -144,21 +144,21 @@ CREATE TABLE IF NOT EXISTS `Juegos`.`Pregunta_Respuesta` (
   PRIMARY KEY (`idPregunta_Respuesta`, `Preguntas_idPreguntas`, `Preguntas_Categorias_idCategorias`, `Respuestas_idRespuestas`),
   CONSTRAINT `fk_Pregunta_Respuesta_Preguntas1`
     FOREIGN KEY (`Preguntas_idPreguntas` , `Preguntas_Categorias_idCategorias`)
-    REFERENCES `Juegos`.`Preguntas` (`idPreguntas` , `Categorias_idCategorias`)
+    REFERENCES `juegos_db`.`Preguntas` (`idPreguntas` , `Categorias_idCategorias`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Pregunta_Respuesta_Respuestas1`
     FOREIGN KEY (`Respuestas_idRespuestas`)
-    REFERENCES `Juegos`.`Respuestas` (`idRespuestas`)
+    REFERENCES `juegos_db`.`Respuestas` (`idRespuestas`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_Pregunta_Respuesta_Preguntas1_idx` ON `Juegos`.`Pregunta_Respuesta` (`Preguntas_idPreguntas` ASC, `Preguntas_Categorias_idCategorias` ASC) VISIBLE;
+CREATE INDEX `fk_Pregunta_Respuesta_Preguntas1_idx` ON `juegos_db`.`Pregunta_Respuesta` (`Preguntas_idPreguntas` ASC, `Preguntas_Categorias_idCategorias` ASC) VISIBLE;
 
-CREATE INDEX `fk_Pregunta_Respuesta_Respuestas1_idx` ON `Juegos`.`Pregunta_Respuesta` (`Respuestas_idRespuestas` ASC) VISIBLE;
+CREATE INDEX `fk_Pregunta_Respuesta_Respuestas1_idx` ON `juegos_db`.`Pregunta_Respuesta` (`Respuestas_idRespuestas` ASC) VISIBLE;
 
-CREATE UNIQUE INDEX `idPregunta_Respuesta_UNIQUE` ON `Juegos`.`Pregunta_Respuesta` (`idPregunta_Respuesta` ASC) VISIBLE;
+CREATE UNIQUE INDEX `idPregunta_Respuesta_UNIQUE` ON `juegos_db`.`Pregunta_Respuesta` (`idPregunta_Respuesta` ASC) VISIBLE;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
