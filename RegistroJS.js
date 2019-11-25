@@ -10,6 +10,7 @@ var contrasenia = document.getElementById('Contraseña');
 var repetirContraseña = document.getElementById('RepetirContraseña');
 var email = document.getElementById('Correo_electrónico');
 var sexoSel = document.getElementById('radioButtonSexo');
+var fecha = document.getElementById("date");
 var country=document.getElementById("pais");
 var countriesOpciones =country.options;
 
@@ -18,7 +19,8 @@ var errorUsuario = document.getElementById("errorGenerarUsuario");
 var errorContraseña = document.getElementById("errorContraseña");
 var errorRepetirContraseña = document.getElementById("errorRepContraseña")
 var errorCorreo = document.getElementById("errorEmail");
-var errorSexoSel = document.getElementById('errorSexo'); 
+var errorSexoSel = document.getElementById('errorSexo');
+var errorDeFecha = document.getElementById("errorDate");
 var errorCountries = document.getElementById("errorPais");
 
 /*Expresión regular para validar el Correo electrónico*/
@@ -106,6 +108,15 @@ if(email.value == ""){
 }*/
 
 /*Condición de error para fecha de nacimiento*/
+ if(!fecha.value == " "){
+ errorDeFecha.innerHTML = "";
+ fecha.style.border="1px solid green";
+ errorDeFecha.style.color="red";
+ errores=true;
+ }else{fecha.innerHTML = "";
+ errorDeFecha.innerHTML = "Ingresar fecha.";
+ fecha.style.border= "1px solid red";
+ }
         
 /*Condición de error para fetch de paises*/
 if(countriesOpciones.selectedIndex == 0){
