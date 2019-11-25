@@ -10,6 +10,8 @@ var contrasenia = document.getElementById('Contraseña');
 var repetirContraseña = document.getElementById('RepetirContraseña');
 var email = document.getElementById('Correo_electrónico');
 var sexoSel = document.getElementById('radioButtonSexo');
+var country=document.getElementById("pais");
+var countriesOpciones =country.options;
 
 /*Los span de errores del Formulario*/
 var errorUsuario = document.getElementById("errorGenerarUsuario");
@@ -17,6 +19,7 @@ var errorContraseña = document.getElementById("errorContraseña");
 var errorRepetirContraseña = document.getElementById("errorRepContraseña")
 var errorCorreo = document.getElementById("errorEmail");
 var errorSexoSel = document.getElementById('errorSexo'); 
+var errorCountries = document.getElementById("errorPais");
 
 /*Expresión regular para validar el Correo electrónico*/
 var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
@@ -91,7 +94,30 @@ if(email.value == ""){
     errorCorreo.innerHTML = "";
     email.style.border = "1px solid green";
     }
-    })
+     
+/*Condición de error para sexo ---> queda siempre en error! (?)
+ var genero = document.getElementById("radioButtonSexo");
+ var errorDeGene = document.getElementById("errorSexo");
+ if(!genero.value == "h" || "m"){
+ errorDeGene.innerHTML = "Seleccione una opción.";
+ errorDeGene.style.color="red";
+ errores=true;
+}else{errorDeGene.innerHTML = "";
+}*/
+
+/*Condición de error para fecha de nacimiento*/
+        
+/*Condición de error para fetch de paises*/
+if(countriesOpciones.selectedIndex == 0){
+  errorCountries.innerHTML="Debe seleccionar un país.";
+  country.style.border="1px solid red";
+  errorCountries.style.color="red";
+  errores=true;
+  } else {errorCountries.innerHTML = "";
+  country.style.border = "1px solid green";
+  }
+    
+  })
 
 /*fetch de paises*/
 
