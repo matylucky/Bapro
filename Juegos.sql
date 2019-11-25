@@ -65,11 +65,7 @@ CREATE TABLE IF NOT EXISTS `juegos_db`.`Partida_Usuario` (
   `usuario_idUsuario` INT NOT NULL,
   `partida_idPartida` INT NOT NULL,
   `puntos` INT NULL,
-  `Partida_Usuariocol` VARCHAR(45) NULL,
-  `Usuarios_idUsuarios` INT NOT NULL,
-  `Partidas_idPartidas` INT NOT NULL,
-  `Partidas_Usuarios_idUsuarios` INT NOT NULL,
-  PRIMARY KEY (`idPartida_Usuario`, `Usuarios_idUsuarios`, `Partidas_idPartidas`, `Partidas_Usuarios_idUsuarios`),
+  PRIMARY KEY (`idPartida_Usuario`),
   CONSTRAINT `fk_Partida_Usuario_Usuarios`
     FOREIGN KEY (`usuario_idUsuario`)
     REFERENCES `juegos_db`.`Usuarios` (`idUsuarios`)
@@ -139,12 +135,11 @@ CREATE TABLE IF NOT EXISTS `juegos_db`.`Pregunta_Respuesta` (
   `correcta` TINYINT NULL,
   `puntaje` INT NOT NULL,
   `Preguntas_idPreguntas` INT NOT NULL,
-  `Preguntas_Categorias_idCategorias` INT NOT NULL,
   `Respuestas_idRespuestas` INT NOT NULL,
-  PRIMARY KEY (`idPregunta_Respuesta`, `Preguntas_idPreguntas`, `Preguntas_Categorias_idCategorias`, `Respuestas_idRespuestas`),
+  PRIMARY KEY (`idPregunta_Respuesta`, `Preguntas_idPreguntas`, `Respuestas_idRespuestas`),
   CONSTRAINT `fk_Pregunta_Respuesta_Preguntas1`
-    FOREIGN KEY (`Preguntas_idPreguntas` , `Preguntas_Categorias_idCategorias`)
-    REFERENCES `juegos_db`.`Preguntas` (`idPreguntas` , `Categorias_idCategorias`)
+    FOREIGN KEY (`Preguntas_idPreguntas`)
+    REFERENCES `juegos_db`.`Preguntas` (`idPreguntas`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Pregunta_Respuesta_Respuestas1`
@@ -154,7 +149,7 @@ CREATE TABLE IF NOT EXISTS `juegos_db`.`Pregunta_Respuesta` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_Pregunta_Respuesta_Preguntas1_idx` ON `juegos_db`.`Pregunta_Respuesta` (`Preguntas_idPreguntas` ASC, `Preguntas_Categorias_idCategorias` ASC) VISIBLE;
+CREATE INDEX `fk_Pregunta_Respuesta_Preguntas1_idx` ON `juegos_db`.`Pregunta_Respuesta` (`Preguntas_idPreguntas` ASC) VISIBLE;
 
 CREATE INDEX `fk_Pregunta_Respuesta_Respuestas1_idx` ON `juegos_db`.`Pregunta_Respuesta` (`Respuestas_idRespuestas` ASC) VISIBLE;
 
