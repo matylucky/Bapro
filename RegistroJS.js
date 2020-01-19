@@ -56,10 +56,6 @@ if(contrasenia.value == ""){
     errorContraseña.innerHTML = "La contraseña debe tener menos de 15 caracteres";
     contrasenia.style.border = "1px solid red";
     errores = true;
-    }else if(contrasenia.value != RepetirContraseña.value){
-    errorContraseña.innerHTML = "Las contraseñas deben coincidir";
-    contrasenia.style.border = "1px solid red";
-    errores = true;
     }else{
     errorContraseña.innerHTML = "";
     contrasenia.style.border = "1px solid green";
@@ -76,6 +72,10 @@ if(RepetirContraseña.value == ""){
   errores = true;
   }else if(repetirContraseña.value.length>15){
   errorRepetirContraseña.innerHTML = "La contraseña debe tener menos de 15 caracteres";
+  repetirContraseña.style.border = "1px solid red";
+  errores = true;
+  }else if(contrasenia.value != RepetirContraseña.value){
+  errorRepetirContraseña.innerHTML = "Las contraseñas deben coincidir";
   repetirContraseña.style.border = "1px solid red";
   errores = true;
   }else{
