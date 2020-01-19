@@ -64,19 +64,22 @@
                 <span style="color:red" class="errorFormControl" id="errorEmail"></span>
             </div>
             <br>
+            <div class="form-group2">
             <p>Sexo:
                 <input class="form-radio" type="radio" id="radioButtonSexo" name="hm" value="I" checked > Indistinto
                 <input class="form-radio" type="radio" id="radioButtonSexo" name="hm" value="h" required> Hombre
                 <input class="form-radio" type="radio" id="radioButtonSexo" name="hm" value="m" required> Mujer
                 <span style="color:red" class="errorFormControl" id="errorSexo"></span>
             </p>
+            </div>
             <br>
-            <div id="fechaDeNac">
+            <div class="form-group2" id="fechaDeNac">
                 Fecha de Nacimiento: <input type="date" id="date" name="fecha" size="16" value="">
                 <span style="color:red" class="errorFormControl" id="errorDate"></span>
             </div>
-            <br>
+            
             <br> 
+            <div class="form-group2">
             <p>
                 <label for="pais"> País:</label>
                      <select class="" name="pais" id="pais" data-toggle="tooltip" title="Debe seleccionar un País.">
@@ -86,6 +89,7 @@
                      </select>
                 <span style="color:red" class="errorFormControl" id="errorPais"></span>
             </p>
+             </div>
             <br>
             <div class="button">
                 <button type="button" class="button-Registro"  name="post">Enviar</button>
