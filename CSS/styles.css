@@ -306,14 +306,25 @@ input#GenerarUsuario.form-control, input#Contraseña.form-control, input#Repetir
   div.row{
     margin-left: auto;
   }
- 
-   /*registro*/
-  input#GenerarUsuario.form-control, input#Contraseña.form-control, input#RepetirContraseña.form-control, input#Correo_electrónico.form-control{
-    margin-left: 30%;
+  input.form-control{
     width: 50%;
   }
+   /*registro*/
+  input#GenerarUsuario.form-control, input#Contraseña.form-control, input#RepetirContraseña.form-control, input#Correo_electrónico.form-control{
+    margin-left: 33%;
+    width: 50%;
+  }
+
+ 
   div.form-group label, div label, p.popup-paragraph{
-    margin-left: 10%;
+    margin-left: 16%;
+    
+  }
+
+  div.form-group2{
+    margin-left: 15%;
+    /*margin: 0 auto;*/
+    text-align: center;
   }
   div.submit label{
     margin-left: 20px;
@@ -328,7 +339,7 @@ input#GenerarUsuario.form-control, input#Contraseña.form-control, input#Repetir
   }
 
   div.button{
-    margin-left: 10%;
+    margin-left: 15%;
   }
 
   p label{
@@ -373,6 +384,13 @@ input#GenerarUsuario.form-control, input#Contraseña.form-control, input#Repetir
   div.form-group label, div label, p.popup-paragraph{
     margin-left: 50%;
   }
+
+  div.form-group2{
+    margin-left: 50px;
+    /*margin: 0 auto;*/
+    text-align: center;
+  }
+
   div.submit label{
     margin-left: 20px;
   }
